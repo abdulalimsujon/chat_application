@@ -14,7 +14,7 @@ function uploader(
     //make upload object
 
     // file upload folder 
-    const UPLOADS_FOLDER = `${__dirname}/../../public/uploads/${subfolder_path}`;
+    const UPLOADS_FOLDER = `${__dirname}/../public/uploads/${subfolder_path}/`;
    
     
 

@@ -7,18 +7,12 @@ const User = require('../models/People')
 
 function getUsers(req,res,next){
 
-async function getUsers(req,res,next){
-  try{
-    const users = await User.find();
-    res.render('users',{
-      users:users
-    })
-  }catch(error){
-
-    next(error);
-
+  
+  
+    res.render('users')
+  
 }
-}}
+
    
 
 
@@ -51,7 +45,7 @@ async function addUsers(req,res,next){
     res.status(500).json({
       errors: {
         common: {
-          msg: err,
+          msg: 'unknown error occured',
         },
       },
     });

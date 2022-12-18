@@ -69,6 +69,7 @@ const addUserValidationHandler = function(req,res,next){
             const {filename} = req.file[0];
             unlink(
                 path.join(__dirname,`/../public/uploads/avatars/${filename}`),
+                
                 (err)=>{
                     if(err){
                         console.log(err)
