@@ -42,6 +42,27 @@
 
 
     <%-include("./partial/add-user-modal.ejs")  %>
+
+    <script>
+      // delete the function 
+
+      async function deleteUser(userId){
+        let response = await fetch(`/users/${userId}`,{
+          method: "DELETE"
+        })
+
+        const result = response.json();
+        if(result.errors){
+          console.log('delete failed')
+        }else{
+          console.log('successfully deleted')
+
+          document.getElementById(userId).remove();
+
+        }
+
+      }
+    </script>
  
 </body>
 
