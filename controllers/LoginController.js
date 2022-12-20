@@ -90,8 +90,16 @@ try{
 
 }
 }
+// do logout 
+function logout(req,res){
+    res.clearCookie(process.env.COOKIE_NAME)
+    res.send('logout')
+}
+
+
 
 module.exports = {
     getLogin,
+    logout,
     login
 }

@@ -18,16 +18,8 @@ async function getUsers(req,res,next){
 
     next(err);
 
-  }
-  
-  
-    
-  
+  } 
 }
-
-   
-
-
 // add user 
 
 async function addUsers(req,res,next){
